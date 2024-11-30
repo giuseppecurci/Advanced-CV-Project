@@ -2,8 +2,8 @@ import argparse
 import os
 import sys
 sys.path.append(".")
-from utils.dcrf import DenseCRF
-from utils.imutils import encode_cmap
+from .utils.dcrf import DenseCRF
+from .utils.imutils import encode_cmap
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 import numpy as np
 import torch
@@ -12,9 +12,9 @@ from omegaconf import OmegaConf
 from torch import multiprocessing
 from tqdm import tqdm
 import joblib
-from datasets import voc
-from utils import evaluate
-from WeCLIP_model.model_attn_aff_voc import WeCLIP
+from .datasets import voc
+from .utils import evaluate
+from .WeCLIP_model.model_attn_aff_voc import WeCLIP
 import imageio.v2 as imageio
 parser = argparse.ArgumentParser()
 parser.add_argument("--config",

@@ -1,8 +1,8 @@
 import os
 import torch
 from lxml import etree
-from clip.utils import parse_xml_to_dict, scoremap2bbox
-from clip.clip_text import class_names, new_class_names, class_names_coco, new_class_names_coco
+from .utils import parse_xml_to_dict, scoremap2bbox
+from .clip_text import class_names, new_class_names, class_names_coco, new_class_names_coco
 from tqdm import tqdm
 from PIL import Image
 from torchvision.transforms import Compose, Resize, ToTensor, Normalize

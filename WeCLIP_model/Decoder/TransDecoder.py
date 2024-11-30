@@ -1,3 +1,6 @@
+import sys
+sys.path.append('advanced_cv_project/WeCLIP_model/Decoder')
+
 from collections import OrderedDict
 from typing import Tuple, Union
 

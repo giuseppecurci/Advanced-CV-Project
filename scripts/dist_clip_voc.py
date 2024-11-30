@@ -15,12 +15,12 @@ from torch.utils.tensorboard import SummaryWriter
 from tqdm import tqdm
 
 from datasets import voc
-from utils.losses import get_aff_loss
-from utils import evaluate
-from utils.AverageMeter import AverageMeter
-from utils.camutils import cams_to_affinity_label
-from utils.optimizer import PolyWarmupAdamW
-from WeCLIP_model.model_attn_aff_voc import WeCLIP
+from ..utils.losses import get_aff_loss
+from ..utils import evaluate
+from ..utils.AverageMeter import AverageMeter
+from ..utils.camutils import cams_to_affinity_label
+from ..utils.optimizer import PolyWarmupAdamW
+from ..WeCLIP_model.model_attn_aff_voc import WeCLIP
 
 
 parser = argparse.ArgumentParser()

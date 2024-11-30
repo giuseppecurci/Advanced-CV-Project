@@ -1,18 +1,21 @@
+import sys
+sys.path.append('advanced_cv_project/WeCLIP_model/Decoder')
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from .segformer_head import SegFormerHead
 import numpy as np
 import clip
-from clip.clip_text import new_class_names, BACKGROUND_CATEGORY
-from pytorch_grad_cam import GradCAM
-from clip.clip_tool import generate_cam_label, generate_clip_fts, perform_single_voc_cam
 import os
+os.chdir('/content/advanced_cv_project')
+
+from advanced_cv_project.clip.clip_text import new_class_names, BACKGROUND_CATEGORY
+from advanced_cv_project.pytorch_grad_cam.grad_cam import GradCAM
+from advanced_cv_project.clip.clip_tool import generate_cam_label, generate_clip_fts, perform_single_voc_cam
 from torchvision.transforms import Compose, Normalize
-from .Decoder.TransDecoder import DecoderTransformer
-from WeCLIP_model.PAR import PAR
-
-
+from advanced_cv_project.WeCLIP_model.Decoder.TransDecoder import DecoderTransformer
+from advanced_cv_project.WeCLIP_model.PAR import PAR
 
 
 def Normalize_clip():

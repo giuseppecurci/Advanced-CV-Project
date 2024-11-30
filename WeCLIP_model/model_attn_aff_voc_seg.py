@@ -2,9 +2,9 @@ import torch
 import torch.nn as nn
 from .segformer_head_seg import SegFormerHead
 import clip
-from clip.clip_text import new_class_names, BACKGROUND_CATEGORY
+from clip_we_clip.clip_text import new_class_names, BACKGROUND_CATEGORY
 from pytorch_grad_cam import GradCAM
-from clip.clip_tool import generate_clip_fts
+from clip_we_clip.clip_tool import generate_clip_fts
 import os
 from torchvision.transforms import Compose, Normalize
 from .Decoder.TransDecoder_seg import DecoderTransformer

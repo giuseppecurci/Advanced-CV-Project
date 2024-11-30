@@ -8,7 +8,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 from torch import nn
-import clip.myAtt as myAtt
+import clip_we_clip.myAtt as myAtt
 
 
 class AttentionPool2d(nn.Module):
